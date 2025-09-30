@@ -1,58 +1,69 @@
-# Solana Presale Smart Contract
+# Solana Token Presale Contract
 
-Smart contract designed for facilitating the sale of SPL tokens with additional features, including a presale mechanism and allocation tickets. The contract is built using the Anchor framework.
+A sophisticated Solana smart contract for managing token presales with allocation-based participation. Built with Anchor framework to provide secure and flexible token sale mechanics.
 
-## Contact
-telegram: @shinnyleo0912
+## Core Features
 
-You can contact me here if you have any problems with this repo then we can decide comfortable contact way.
-
-## Key Features
-
-- **Token Sale:** The contract enables the sale of SPL tokens, allowing users to purchase tokens directly from the vending machine.
-  
-- **Presale Mechanism:** A configurable presale phase is implemented, allowing for exclusive token access for a specified duration before the public sale.
-
-- **Allocation Tickets:** Users can acquire allocation tickets during the presale, providing them with reserved spots for purchasing SPL tokens.
-
-- **Flexible Configuration:** The contract offers flexibility in configuring various parameters, such as presale and public sale start/end times, token prices, and ticket allocation limits.
+- Dual-Phase Sales: Configurable presale and public sale periods with separate timing controls
+- Allocation Ticket System: Reserve purchase spots during presale phase
+- SPL Token Integration: Native support for Solana Program Library tokens
+- Customizable Parameters: 
+  - Presale/public sale start/end times
+  - Token pricing structure
+  - Allocation limits per ticket
+  - Flexible configuration options
 
 ## Prerequisites
 
-Before you begin, make sure you have the following tools installed:
+Ensure you have the following installed:
 
-- [Rust](https://www.rust-lang.org/tools/install)
-- [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
-- [Anchor CLI](https://project-serum.github.io/anchor/getting-started/installation.html)
-- [Node.js](https://nodejs.org/en/download/)
-- [Yarn](https://yarnpkg.com/getting-started/install)
+- Rust (latest stable version)
+- Cargo (Rust package manager)
+- Anchor CLI
+- Node.js (v16 or higher)
+- Yarn package manager
 
-## Getting Started
+## Quick Start
 
-1. **Installation:** Clone the repository and install dependencies.
+1. Clone & Setup
+```bash
+git clone https://github.com/blixor7/Solana-Token-Presale-Contract.git
+cd Solana-Presale-Smart-Contract
+yarn install
+```
 
-   ```bash
-   git clone https://github.com/web3batman/Solana-Presale-Smart-Contract
-   cd Solana-Presale-Smart-Contract
-   yarn
-   ```
+2. Build Contract
+```bash
+anchor build
+```
 
-2. **Build the Smart Contract:**
+3. Run Test Suite
+```bash
+anchor test
+```
 
-   ```bash
-   anchor build
-   ```
+4. Deploy
+```bash
+# Switch to your target network first
+anchor deploy
+```
 
-3. **Run Tests:**
+## Project Structure
 
-   ```bash
-   anchor test
-   ```
+```
+Solana-Presale-Smart-Contract/
+- programs/                 # Anchor program source
+- tests/                   # Test suites
+- migrations/              # Deployment scripts
+- app/                     # Frontend integration (if applicable)
+```
 
-4. **Deploy:**
+## Usage
 
-   Switch to your desired network and deploy
-   ```bash
-   anchor deploy
-   ```
+The contract enables project creators to:
+- Set up timed presale phases with exclusive access
+- Manage allocation tickets for fair distribution
+- Handle SPL token sales with customizable parameters
+- Transition smoothly between presale and public sale phases
 
+Built with security and flexibility in mind for Solana token launches.
